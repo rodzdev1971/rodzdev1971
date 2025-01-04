@@ -5,7 +5,9 @@ import './App.css'
 
 function App() {
   // const [count, setCount] = useState(0)
-
+  function clickHandler(){
+    console.log('click')
+  }
   return (
     <>
       <header>
@@ -20,14 +22,14 @@ function App() {
 
       <div className="hero">
         <h2>Saving Lives, One Drop at a Time</h2>
-        <button onClick="scrollToSection('find-blood')">Find Blood Now</button>
-        <button onClick="scrollToSection('register-donor')">Register as Donor</button>
+        <button onClick={clickHandler}>Find Blood Now</button>
+        <button onClick={clickHandler}>Register as Donor</button>
       </div>
 
     <section id="find-blood">
       <h3>Find Blood</h3>
       <form>
-        <label for="blood-type">Blood Type:</label>
+        <label >Blood Type:</label>
         <select id="blood-type">
           <option>A+</option>
           <option>A-</option>
@@ -38,9 +40,9 @@ function App() {
           <option>AB+</option>
           <option>AB-</option>
         </select>
-        <label for="location">Location:</label>
+        <label >Location:</label>
         <input type="text" id="location" placeholder="Enter City or Zip Code" />
-        <label for="urgency">Urgency:</label>
+        <label>Urgency:</label>
         <select id="urgency">
           <option>Low</option>
           <option>Medium</option>
@@ -53,13 +55,13 @@ function App() {
     <section id="register-donor">
       <h3>Register as Donor</h3>
       <form>
-        <label for="name">Name:</label>
+        <label >Name:</label>
         <input type="text" id="name" placeholder="Full Name" />
-        <label for="email">Email:</label>
+        <label >Email:</label>
         <input type="email" id="email" placeholder="Email Address" />
-        <label for="location-donor">Location:</label>
+        <label >Location:</label>
         <input type="text" id="location-donor" placeholder="Enter City or Zip Code" />
-        <label for="blood-type-donor">Blood Type:</label>
+        <label >Blood Type:</label>
         <select id="blood-type-donor">
           <option>A+</option>
           <option>A-</option>
